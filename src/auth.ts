@@ -1,7 +1,7 @@
-import {AuthOptions} from 'next-auth';
+import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-const auth: AuthOptions = {
+export const { auth, handlers: { GET, POST }, signIn, signOut } = NextAuth({
   providers: [
     CredentialsProvider({
       name: 'Credentials',
@@ -20,7 +20,11 @@ const auth: AuthOptions = {
         return null;
       }
     })
-  ]
-};
-
-export default auth;
+  ],
+  callbacks: {
+    authorized: ({auth}) => auth != null
+  },
+  pages: {
+    signIn: '/login'
+  }
+});

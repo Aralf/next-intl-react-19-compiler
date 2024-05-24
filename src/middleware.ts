@@ -1,5 +1,5 @@
 import {NextRequest} from 'next/server';
-import {withAuth} from 'next-auth/middleware';
+import { auth } from "@/auth";
 import createIntlMiddleware from 'next-intl/middleware';
 import {locales} from './config';
 
@@ -15,19 +15,11 @@ const intlMiddleware = createIntlMiddleware({
   defaultLocale: 'en'
 });
 
-const authMiddleware = withAuth(
+const authMiddleware = auth(
   // Note that this callback is only invoked if
   // the `authorized` callback has returned `true`
   // and not for pages listed in `pages`.
-  (req) => intlMiddleware(req),
-  {
-    callbacks: {
-      authorized: ({token}) => token != null
-    },
-    pages: {
-      signIn: '/login'
-    }
-  }
+  (req) => intlMiddleware(req)
 );
 
 export default function middleware(req: NextRequest) {

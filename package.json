@@ -12,7 +12,7 @@
   "dependencies": {
     "babel-plugin-react-compiler": "0.0.0-experimental-592953e-20240517",
     "next": "15.0.0-rc.0",
-    "next-auth": "^4.24.4",
+    "next-auth": "5.0.0-beta.18",
     "next-intl": "latest",
     "react": "19.0.0-rc-935180c7e0-20240524",
     "react-dom": "19.0.0-rc-935180c7e0-20240524"

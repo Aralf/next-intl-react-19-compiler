@@ -1,10 +1,10 @@
 'use client';
 
 import {useRouter} from 'next/navigation';
-import {signIn} from 'next-auth/react';
 import {useLocale, useTranslations} from 'next-intl';
 import {FormEvent, useState} from 'react';
 import PageLayout from '../../../components/PageLayout';
+import {signIn} from "@/auth";
 
 export default function Login() {
   const locale = useLocale();
