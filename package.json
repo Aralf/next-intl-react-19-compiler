@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "babel-plugin-react-compiler": "0.0.0-experimental-592953e-20240517",
-    "next": "14.3.0-canary.70",
+    "next": "15.0.0-rc.0",
     "next-auth": "^4.24.4",
     "next-intl": "latest",
-    "react": "19.0.0-rc-3f1436cca1-20240516",
-    "react-dom": "19.0.0-rc-3f1436cca1-20240516"
+    "react": "19.0.0-rc-935180c7e0-20240524",
+    "react-dom": "19.0.0-rc-935180c7e0-20240524"
   },
   "devDependencies": {
     "@types/node": "^20",
